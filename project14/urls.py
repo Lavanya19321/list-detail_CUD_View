@@ -21,6 +21,7 @@ from app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('school_list/',school_list.as_view(),name='school_list'),
+    path('school_create/',school_create.as_view(),name='school_create'),
     re_path('(?P<pk>\d+)/',school_detail.as_view(),name='school_detail'),
 
 ]

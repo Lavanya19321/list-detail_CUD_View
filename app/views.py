@@ -15,3 +15,9 @@ class school_list(ListView):
 class school_detail(DetailView):
     model=School
     context_object_name='sclobj'
+
+
+class school_create(CreateView):
+    model=School
+    fields='__all__'
+
