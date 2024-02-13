@@ -21,3 +21,6 @@ class school_create(CreateView):
     model=School
     fields='__all__'
 
+class school_update(UpdateView):
+    model=School
+    fields='__all__'

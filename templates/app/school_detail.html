@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        h1{
-            color:green;
-        }
-    </style>
-</head>
-<body>
+{% extends 'dummy.html' %}
+
+
+{% block title %}
+<title>school detail</title>
+{% endblock %}
+    {% block body_block %}
     <center>
         <h1> school name is {{sclobj.sname}}</h1>
         <h1> principal name is {{sclobj.sprincipal}}</h1>
@@ -29,8 +23,10 @@
             </tr>
             {% endfor %}
 
-        </table>
+        </table><br><br><br>
+        <a href="{% url 'school_update' pk=sclobj.pk  %}" class="btn btn-primary">school_update </a>
     </center>
     
-</body>
-</html>
+
+
+    {% endblock %}

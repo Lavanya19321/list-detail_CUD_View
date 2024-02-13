@@ -7,11 +7,19 @@
 
 {% block body_block %}
      <center>
+      {% if form.instance.pk %}
+      <h1>school Update Form</h1>
+      {% else %}
         <h1>School create form </h1>
+      {% endif %}
           <form method="POST">
             {% csrf_token %}
             {{form.as_p}}
-            <input type="submit" value="create">
+            {% if form.instance.pk %}
+            <input type="submit" value="Update" class="btn-success">
+            {% else %}
+            <input type="submit" value="create" class="btn-success">
+            {% endif %}
           </form>
      </center>
 {% endblock %}
