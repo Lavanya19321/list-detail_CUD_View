@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1> school name is {{sclobj.sname}}</h1>
+        <h1> principal name is {{sclobj.sprincipal}}</h1>
+        <h1> school  location is {{sclobj.sloc}}</h1>
+        <h1>STUDENT details are</h1>
+        <table border="3px">
+
+            <tr>
+                <th>student name</th>
+                <th>student age</th>
+            </tr>
+            {% for st in sclobj.School.all %}
+            <tr>
+                <td>{{st.Stname}}</td>
+                <td>{{st.st_age}}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </center>
+    
+</body>
+</html>

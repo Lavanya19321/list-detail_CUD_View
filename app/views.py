@@ -12,3 +12,6 @@ class school_list(ListView):
 
 
 
+class school_detail(DetailView):
+    model=School
+    context_object_name='sclobj'
