@@ -1,0 +1,22 @@
+{% extends 'dummy.html' %}
+
+
+{% block title %}
+<title>school delete</title>
+{% endblock %}
+
+{% block body_block %}
+     <center>
+        <h1>Are you sure? </h1>
+        <h2>Do you want to delete it ?</h2>
+        <form  method="POST">
+            {% csrf_token %}
+
+
+            <input type="submit" value="Delete" class="btn btn-danger">
+        </form><br><br>
+        <a href="{% url 'school_list' %}" class="btn btn-primary"> go back to List</a>
+        <a href="{% url 'school_detail'  pk=sclobj.pk %}" class="btn btn-primary">go back to details</a>
+
+     </center>
+{% endblock %}
